@@ -41,7 +41,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
         {
             if (topicNames == null)
             {
-                throw new ArgumentNullException("topicNames");
+                throw new ArgumentNullException(nameof(topicNames));
             }
 
             _configuration = configuration;

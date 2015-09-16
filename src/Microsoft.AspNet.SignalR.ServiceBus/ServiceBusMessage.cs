@@ -17,7 +17,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
         {
             if (messages == null)
             {
-                throw new ArgumentNullException("messages");
+                throw new ArgumentNullException(nameof(messages));
             }
 
             var scaleoutMessage = new ScaleoutMessage(messages);
@@ -28,7 +28,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
         {
             if (brokeredMessage == null)
             {
-                throw new ArgumentNullException("brokeredMessage");
+                throw new ArgumentNullException(nameof(brokeredMessage));
             }
 
             var stream = brokeredMessage.GetBody<Stream>();

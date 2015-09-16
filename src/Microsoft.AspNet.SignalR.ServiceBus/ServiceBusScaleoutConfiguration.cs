@@ -30,12 +30,12 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
         {
             if (String.IsNullOrEmpty(connectionString))
             {
-                throw new ArgumentNullException("connectionString");
+                throw new ArgumentNullException(nameof(connectionString));
             }
 
             if (String.IsNullOrEmpty(topicPrefix))
             {
-                throw new ArgumentNullException("topixPrefix");
+                throw new ArgumentNullException(nameof(topixPrefix));
             }
 
             ConnectionString = connectionString;
@@ -68,7 +68,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 _topicCount = value;

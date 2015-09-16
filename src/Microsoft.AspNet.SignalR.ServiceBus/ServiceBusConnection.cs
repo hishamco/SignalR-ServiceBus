@@ -74,7 +74,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
         {
             if (connectionContext == null)
             {
-                throw new ArgumentNullException("connectionContext");
+                throw new ArgumentNullException(nameof(connectionContext));
             }
 
             _logger.WriteInformation("Subscribing to {0} topic(s) in the service bus...", connectionContext.TopicNames.Count);

@@ -39,7 +39,7 @@ namespace Microsoft.AspNet.SignalR.ServiceBus
 
             if (configuration == null)
             {
-                throw new ArgumentNullException("configuration");
+                throw new ArgumentNullException(nameof(configuration));
             }
 
             if(String.IsNullOrEmpty(configuration.TopicPrefix))
